@@ -1,0 +1,6 @@
+Dear <Name>,
+
+Isn't Biolerplate great? With it, you can quickly create <Document Type>!
+
+Sincerely,
+Me
