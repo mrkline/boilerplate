@@ -7,7 +7,7 @@ namespace Boilerplate
 {
 	class LetterComponent
 	{
-		public abstract string Text { get; set; }
+		public string Text { get; set; }
 	}
 
 	class LetterText : LetterComponent
@@ -30,6 +30,7 @@ namespace Boilerplate
 		public Letter(string filename)
 		{
 			components = new List<LetterComponent>();
+			Fields = new List<LetterField>();
 			StringType currentType = StringType.Text;
 			string contents = File.ReadAllText(filename);
 			StringBuilder builder = new StringBuilder();

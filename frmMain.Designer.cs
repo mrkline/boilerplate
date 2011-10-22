@@ -31,9 +31,10 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
 			this.btnToClipboard = new System.Windows.Forms.Button();
 			this.menu = new System.Windows.Forms.MenuStrip();
-			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsiOpen = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
+			this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
 			this.menu.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -51,36 +52,41 @@
 			// 
 			this.menu.BackColor = System.Drawing.SystemColors.Control;
 			this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.tsmFile,
+            this.tsmAbout});
 			this.menu.Location = new System.Drawing.Point(0, 0);
 			this.menu.Name = "menu";
 			this.menu.Size = new System.Drawing.Size(284, 24);
 			this.menu.TabIndex = 1;
 			this.menu.Text = "menuStrip1";
 			// 
-			// aboutToolStripMenuItem
+			// tsmFile
 			// 
-			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-			this.aboutToolStripMenuItem.Text = "&About";
+			this.tsmFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsiOpen});
+			this.tsmFile.Name = "tsmFile";
+			this.tsmFile.Size = new System.Drawing.Size(37, 20);
+			this.tsmFile.Text = "&File";
 			// 
-			// openToolStripMenuItem
+			// tsiOpen
 			// 
-			this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.openToolStripMenuItem.Text = "&Open";
+			this.tsiOpen.Image = ((System.Drawing.Image)(resources.GetObject("tsiOpen.Image")));
+			this.tsiOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsiOpen.Name = "tsiOpen";
+			this.tsiOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+			this.tsiOpen.Size = new System.Drawing.Size(152, 22);
+			this.tsiOpen.Text = "&Open";
+			this.tsiOpen.Click += new System.EventHandler(this.tsiOpen_Click);
 			// 
-			// fileToolStripMenuItem
+			// tsmAbout
 			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.fileToolStripMenuItem.Text = "&File";
+			this.tsmAbout.Name = "tsmAbout";
+			this.tsmAbout.Size = new System.Drawing.Size(52, 20);
+			this.tsmAbout.Text = "&About";
+			// 
+			// dlgOpen
+			// 
+			this.dlgOpen.Filter = "Text files|*.txt|All files|*.*";
 			// 
 			// frmMain
 			// 
@@ -103,9 +109,10 @@
 
 		private System.Windows.Forms.Button btnToClipboard;
 		private System.Windows.Forms.MenuStrip menu;
-		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem tsmFile;
+		private System.Windows.Forms.ToolStripMenuItem tsiOpen;
+		private System.Windows.Forms.ToolStripMenuItem tsmAbout;
+		private System.Windows.Forms.OpenFileDialog dlgOpen;
 	}
 }
 
