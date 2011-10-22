@@ -35,7 +35,10 @@
 			this.tsiOpen = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmAbout = new System.Windows.Forms.ToolStripMenuItem();
 			this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
+			this.pnlFields = new System.Windows.Forms.Panel();
+			this.lblFieldsWillAppear = new System.Windows.Forms.Label();
 			this.menu.SuspendLayout();
+			this.pnlFields.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnToClipboard
@@ -88,11 +91,33 @@
 			// 
 			this.dlgOpen.Filter = "Text files|*.txt|All files|*.*";
 			// 
+			// pnlFields
+			// 
+			this.pnlFields.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+						| System.Windows.Forms.AnchorStyles.Left)
+						| System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlFields.AutoScroll = true;
+			this.pnlFields.Controls.Add(this.lblFieldsWillAppear);
+			this.pnlFields.Location = new System.Drawing.Point(12, 27);
+			this.pnlFields.Name = "pnlFields";
+			this.pnlFields.Size = new System.Drawing.Size(260, 194);
+			this.pnlFields.TabIndex = 2;
+			// 
+			// lblFieldsWillAppear
+			// 
+			this.lblFieldsWillAppear.AutoSize = true;
+			this.lblFieldsWillAppear.Location = new System.Drawing.Point(4, 4);
+			this.lblFieldsWillAppear.Name = "lblFieldsWillAppear";
+			this.lblFieldsWillAppear.Size = new System.Drawing.Size(171, 26);
+			this.lblFieldsWillAppear.TabIndex = 0;
+			this.lblFieldsWillAppear.Text = "Fields will appear here\r\nwhen a boilerplate letter is opened.";
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.Controls.Add(this.pnlFields);
 			this.Controls.Add(this.btnToClipboard);
 			this.Controls.Add(this.menu);
 			this.MainMenuStrip = this.menu;
@@ -100,6 +125,8 @@
 			this.Text = "Boilerplate";
 			this.menu.ResumeLayout(false);
 			this.menu.PerformLayout();
+			this.pnlFields.ResumeLayout(false);
+			this.pnlFields.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -113,6 +140,8 @@
 		private System.Windows.Forms.ToolStripMenuItem tsiOpen;
 		private System.Windows.Forms.ToolStripMenuItem tsmAbout;
 		private System.Windows.Forms.OpenFileDialog dlgOpen;
+		private System.Windows.Forms.Panel pnlFields;
+		private System.Windows.Forms.Label lblFieldsWillAppear;
 	}
 }
 
