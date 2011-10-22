@@ -46,6 +46,7 @@ namespace Boilerplate
 			foreach (LetterField field in currLetter.Fields)
 			{
 				Label lbl = new Label();
+				lbl.AutoSize = true;
 				lbl.Text = field.Name + ":";
 				lbl.Location = new Point(xPadding, currY);
 
@@ -64,6 +65,31 @@ namespace Boilerplate
 				currY += offY;
 			}
 
+			btnToClipboard.Enabled = true;
+		}
+
+		private void btnToClipboard_Click(object sender, EventArgs e)
+		{
+			int numFields = currLetter.Fields.Count;
+
+			for (int c = 0; c < numFields; ++c)
+			{
+				if (fieldBoxes[c].Text.Length == 0)
+				{
+					MessageBox.Show(" The field " + currLetter.Fields[c].Name
+						+ " hasn't been filled in.", "Empty Field",
+						MessageBoxButtons.OK, MessageBoxIcon.Information);
+					fieldBoxes[c].Focus();
+					return;
+				}
+			}
+
+			for (int c = 0; c < numFields; ++c)
+			{
+				currLetter.Fields[c].Text = fieldBoxes[c].Text;
+			}
+
+			Clipboard.SetText(currLetter.ToString());
 		}
 	}
 }

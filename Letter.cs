@@ -155,5 +155,14 @@ namespace Boilerplate
 				}
 			}
 		}
+
+		public override string ToString()
+		{
+			StringBuilder builder = new StringBuilder();
+			foreach (LetterComponent component in components)
+				builder.Append(component.Text);
+
+			return builder.ToString();
+		}
 	}
 }
