@@ -1,0 +1,7 @@
+Dear <Name>,
+
+Your new login is <user case sensitive login>
+Your new password is <user case sensitive password for login>
+
+Thanks,
+<My name>

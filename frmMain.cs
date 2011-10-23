@@ -16,6 +16,7 @@ namespace Boilerplate
 		public frmMain()
 		{
 			InitializeComponent();
+			MinimumSize = Size;
 			fieldBoxes = new List<TextBox>();
 		}
 
@@ -34,28 +35,55 @@ namespace Boilerplate
 					return;
 				}
 			}
+			else
+			{
+				return;
+			}
 
 			pnlFields.Controls.Clear();
 			fieldBoxes.Clear();
 			
+			List<Label> labels = new List<Label>();
 			const int xPadding = 10;
+			const int windowPadding = 20;
 			const int txtWidth = 150;
-			const int offY = 30;
-			int currY = 10;
 
-			foreach (LetterField field in currLetter.Fields)
+			int maxSize = 0;
+			int txtX = 0;
+			foreach(LetterField field in currLetter.Fields)
 			{
 				Label lbl = new Label();
 				lbl.AutoSize = true;
 				lbl.Text = field.Name + ":";
+				labels.Add(lbl);
+
+				int neededSize = lbl.PreferredWidth + txtWidth + 3 * xPadding + windowPadding;
+				if (neededSize > maxSize)
+				{
+					maxSize = neededSize;
+					txtX = lbl.PreferredWidth + 2 * xPadding;
+				}
+			}
+
+			// \todo: Figure out why this is ignoring requests to shrink
+			Width = maxSize;
+			MinimumSize = Size;
+
+			const int offY = 30;
+			int currY = 10;
+
+			int numFields = currLetter.Fields.Count;
+			for (int c = 0; c < numFields; ++c)
+			{
+				LetterField field = currLetter.Fields[c];
+
+				Label lbl = labels[c];
 				lbl.Location = new Point(xPadding, currY);
 
 				TextBox txt = new TextBox();
 				txt.Width = txtWidth;
-				txt.Anchor = AnchorStyles.Top | AnchorStyles.Left |
-					AnchorStyles.Right;
-				txt.Location = new Point(pnlFields.Width - xPadding - txtWidth,
-					currY);
+				txt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+				txt.Location = new Point(txtX, currY);
 
 				pnlFields.Controls.Add(lbl);
 				pnlFields.Controls.Add(txt);

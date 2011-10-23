@@ -79,7 +79,7 @@
 			this.tsiOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiOpen.Name = "tsiOpen";
 			this.tsiOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.tsiOpen.Size = new System.Drawing.Size(152, 22);
+			this.tsiOpen.Size = new System.Drawing.Size(146, 22);
 			this.tsiOpen.Text = "&Open";
 			this.tsiOpen.Click += new System.EventHandler(this.tsiOpen_Click);
 			// 
@@ -100,9 +100,9 @@
 						| System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlFields.AutoScroll = true;
 			this.pnlFields.Controls.Add(this.lblFieldsWillAppear);
-			this.pnlFields.Location = new System.Drawing.Point(12, 27);
+			this.pnlFields.Location = new System.Drawing.Point(0, 27);
 			this.pnlFields.Name = "pnlFields";
-			this.pnlFields.Size = new System.Drawing.Size(260, 194);
+			this.pnlFields.Size = new System.Drawing.Size(284, 194);
 			this.pnlFields.TabIndex = 2;
 			// 
 			// lblFieldsWillAppear
