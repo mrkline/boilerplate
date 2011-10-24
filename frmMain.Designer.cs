@@ -48,7 +48,7 @@
 			this.btnToClipboard.Name = "btnToClipboard";
 			this.btnToClipboard.Size = new System.Drawing.Size(130, 23);
 			this.btnToClipboard.TabIndex = 0;
-			this.btnToClipboard.Text = "Letter to Clipboard";
+			this.btnToClipboard.Text = "Document to Clipboard";
 			this.btnToClipboard.UseVisualStyleBackColor = true;
 			this.btnToClipboard.Click += new System.EventHandler(this.btnToClipboard_Click);
 			// 
