@@ -65,9 +65,9 @@ namespace Boilerplate
 				}
 			}
 
-			// \todo: Figure out why this is ignoring requests to shrink
+			// The minimum size must be set first if the window is to shrink.
+			MinimumSize = new Size(maxSize, Size.Height);
 			Width = maxSize;
-			MinimumSize = Size;
 
 			const int offY = 30;
 			int currY = 10;
