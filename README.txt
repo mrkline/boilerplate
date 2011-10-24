@@ -1,8 +1,8 @@
 Usage:
 
 Boilerplate takes a text file tagged with fields to be filled in.
-It's useful for tasks such as repeatedly sending an account verification email
-to diferent users.
+It's useful for tasks such as quickly filling out form letters and emails to
+multiple recipients.
 
 When it opens a file, Boilerplate scans for tags surrounded in < > characters.
 Consequently, to have either show up normally in the resulting document,
