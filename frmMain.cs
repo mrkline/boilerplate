@@ -84,6 +84,7 @@ namespace Boilerplate
 				txt.Width = txtWidth;
 				txt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 				txt.Location = new Point(txtX, currY);
+				txt.Enter += new EventHandler(SelectAllText);
 
 				pnlFields.Controls.Add(lbl);
 				pnlFields.Controls.Add(txt);
@@ -118,6 +119,12 @@ namespace Boilerplate
 			}
 
 			Clipboard.SetText(currLetter.ToString());
+		}
+
+		private void SelectAllText(object sender, EventArgs e)
+		{
+			TextBox t = sender as TextBox;
+			t.SelectAll();
 		}
 	}
 }

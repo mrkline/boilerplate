@@ -77,7 +77,7 @@
 			this.tsiOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiOpen.Name = "tsiOpen";
 			this.tsiOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.tsiOpen.Size = new System.Drawing.Size(152, 22);
+			this.tsiOpen.Size = new System.Drawing.Size(146, 22);
 			this.tsiOpen.Text = "&Open";
 			this.tsiOpen.Click += new System.EventHandler(this.tsiOpen_Click);
 			// 
