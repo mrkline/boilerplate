@@ -77,7 +77,7 @@
 			this.tsiOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiOpen.Name = "tsiOpen";
 			this.tsiOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.tsiOpen.Size = new System.Drawing.Size(146, 22);
+			this.tsiOpen.Size = new System.Drawing.Size(152, 22);
 			this.tsiOpen.Text = "&Open";
 			this.tsiOpen.Click += new System.EventHandler(this.tsiOpen_Click);
 			// 
@@ -114,6 +114,7 @@
 			this.Controls.Add(this.pnlFields);
 			this.Controls.Add(this.btnToClipboard);
 			this.Controls.Add(this.menu);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menu;
 			this.Name = "frmMain";
 			this.Text = "Boilerplate";
