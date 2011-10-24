@@ -1,3 +1,8 @@
+Requirements:
+
+Microsoft .NET Framework 2.0 or greater (for Windows),
+or Mono (for OSX and Linux)
+
 Usage:
 
 Boilerplate takes a text file tagged with fields to be filled in.
