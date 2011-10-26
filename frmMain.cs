@@ -10,6 +10,7 @@ namespace Boilerplate
 {
 	public partial class frmMain : Form
 	{
+		private string startingTitle;
 		private Letter currLetter;
 		private List<TextBox> fieldBoxes;
 
@@ -18,6 +19,7 @@ namespace Boilerplate
 			InitializeComponent();
 			MinimumSize = Size;
 			fieldBoxes = new List<TextBox>();
+			startingTitle = Text;
 		}
 
 		private void tsiOpen_Click(object sender, EventArgs e)
@@ -95,6 +97,8 @@ namespace Boilerplate
 			}
 
 			btnToClipboard.Enabled = true;
+			Text = startingTitle + " - "
+				+ System.IO.Path.GetFileNameWithoutExtension(dlgOpen.FileName);
 		}
 
 		private void btnToClipboard_Click(object sender, EventArgs e)
