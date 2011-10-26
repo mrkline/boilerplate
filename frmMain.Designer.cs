@@ -36,6 +36,7 @@
 			this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
 			this.pnlFields = new System.Windows.Forms.Panel();
 			this.lblFieldsWillAppear = new System.Windows.Forms.Label();
+			this.btnClear = new System.Windows.Forms.Button();
 			this.menu.SuspendLayout();
 			this.pnlFields.SuspendLayout();
 			this.SuspendLayout();
@@ -44,10 +45,10 @@
 			// 
 			this.btnToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
 			this.btnToClipboard.Enabled = false;
-			this.btnToClipboard.Location = new System.Drawing.Point(77, 227);
+			this.btnToClipboard.Location = new System.Drawing.Point(36, 227);
 			this.btnToClipboard.Name = "btnToClipboard";
 			this.btnToClipboard.Size = new System.Drawing.Size(130, 23);
-			this.btnToClipboard.TabIndex = 0;
+			this.btnToClipboard.TabIndex = 2;
 			this.btnToClipboard.Text = "Document to Clipboard";
 			this.btnToClipboard.UseVisualStyleBackColor = true;
 			this.btnToClipboard.Click += new System.EventHandler(this.btnToClipboard_Click);
@@ -60,7 +61,7 @@
 			this.menu.Location = new System.Drawing.Point(0, 0);
 			this.menu.Name = "menu";
 			this.menu.Size = new System.Drawing.Size(284, 24);
-			this.menu.TabIndex = 1;
+			this.menu.TabIndex = 0;
 			this.menu.Text = "menuStrip1";
 			// 
 			// tsmFile
@@ -77,7 +78,7 @@
 			this.tsiOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsiOpen.Name = "tsiOpen";
 			this.tsiOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.tsiOpen.Size = new System.Drawing.Size(152, 22);
+			this.tsiOpen.Size = new System.Drawing.Size(146, 22);
 			this.tsiOpen.Text = "&Open";
 			this.tsiOpen.Click += new System.EventHandler(this.tsiOpen_Click);
 			// 
@@ -95,7 +96,7 @@
 			this.pnlFields.Location = new System.Drawing.Point(0, 27);
 			this.pnlFields.Name = "pnlFields";
 			this.pnlFields.Size = new System.Drawing.Size(284, 194);
-			this.pnlFields.TabIndex = 2;
+			this.pnlFields.TabIndex = 1;
 			// 
 			// lblFieldsWillAppear
 			// 
@@ -106,11 +107,24 @@
 			this.lblFieldsWillAppear.TabIndex = 0;
 			this.lblFieldsWillAppear.Text = "Fields will appear here\r\nwhen a boilerplate letter is opened.";
 			// 
+			// btnClear
+			// 
+			this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+			this.btnClear.Enabled = false;
+			this.btnClear.Location = new System.Drawing.Point(173, 228);
+			this.btnClear.Name = "btnClear";
+			this.btnClear.Size = new System.Drawing.Size(75, 23);
+			this.btnClear.TabIndex = 3;
+			this.btnClear.Text = "Clear Fields";
+			this.btnClear.UseVisualStyleBackColor = true;
+			this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.Controls.Add(this.btnClear);
 			this.Controls.Add(this.pnlFields);
 			this.Controls.Add(this.btnToClipboard);
 			this.Controls.Add(this.menu);
@@ -136,6 +150,7 @@
 		private System.Windows.Forms.OpenFileDialog dlgOpen;
 		private System.Windows.Forms.Panel pnlFields;
 		private System.Windows.Forms.Label lblFieldsWillAppear;
+		private System.Windows.Forms.Button btnClear;
 	}
 }
 

@@ -97,6 +97,7 @@ namespace Boilerplate
 			}
 
 			btnToClipboard.Enabled = true;
+			btnClear.Enabled = true;
 			Text = startingTitle + " - "
 				+ System.IO.Path.GetFileNameWithoutExtension(dlgOpen.FileName);
 		}
@@ -129,6 +130,12 @@ namespace Boilerplate
 		{
 			TextBox t = sender as TextBox;
 			t.SelectAll();
+		}
+
+		private void btnClear_Click(object sender, EventArgs e)
+		{
+			foreach (TextBox box in fieldBoxes)
+				box.Clear();
 		}
 	}
 }
